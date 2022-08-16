@@ -15,6 +15,7 @@ public class NicheThyselfExplorePage {
 	@FindBy(xpath = "//p//ul//li[contains(text(),delhi)]")
 	public WebElement selectedCity;
 
+
 	WebDriver driver;
 
 	public NicheThyselfExplorePage(WebDriver driver) {
@@ -27,6 +28,7 @@ public class NicheThyselfExplorePage {
 		Select select = new Select(selectDropdown);
 		select.selectByValue(city);
 
+		System.out.println("Changes Made! ");
 	}
 
 	public String verifySelectedCity() {
